@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ProTypes from 'prop-types'
 
-export class Todo extends Component {
+export default class Todo extends Component {
     render() {
         return (
             <li

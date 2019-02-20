@@ -9,6 +9,7 @@ export default class Footer extends Component {
         return (
             <a href='#' onClick={e => {
                 e.preventDefault()
+                // a 标签拦截了默认的跳转，转而执行自定义的JS代码
                 this.props.onFilterChange(filter)
             }}>
                 {name}
@@ -34,5 +35,5 @@ export default class Footer extends Component {
 
 ProTypes.proTypes = {
     onFilterChange: ProTypes.func.isRequired,
-    filter: ProTypes.oneOf(['SHOW_ALL', 'SHOW_COMPLETED'])
+    filter: ProTypes.oneOf(['SHOW_ALL', 'SHOW_COMPLETED', 'SHOW_ACTIVE']).isRequired
 };
